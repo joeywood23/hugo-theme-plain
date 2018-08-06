@@ -1,0 +1,13 @@
+<article class="teaser">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  {{ if eq .Type "post" }}
+    {{ partial "post/metadata.html" . }}
+    {{ partial "post/tldr.html" . }}
+  {{ end }}
+  <p>
+    {{ .Summary }}
+    {{ if .Truncated }}
+      <a href="{{ .RelPermalink }}">read on &raquo;</a>
+    {{ end }}
+  </p>
+</article>

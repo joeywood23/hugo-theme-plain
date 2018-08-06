@@ -1,17 +1,13 @@
 <p>
   Published on {{ partial "datetime" .PublishDate }}
-
   {{ if lt .PublishDate .Lastmod }}
     and last modified on
     {{ partial "datetime" .Lastmod }}
   {{ end }}
-
-  by <span itemprop="author">{{ $.Param "author" }}</span>
-
+  by {{ $.Param "author" }}
   {{ if isset $.Site.Params "repository" }}
   {{ with .GitInfo }}
     with <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">commit {{ .AbbreviatedHash }}</a>
   {{ end }}{{ end }}
-
-  using <span itemprop="wordCount">{{ .WordCount }}</span> words.
+  using {{ .WordCount }} words.
 </p>

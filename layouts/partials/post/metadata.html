@@ -1,8 +1,9 @@
-Metadata:
-<ul class="metadata">
 
-  <li>{{ partial "datetime" .PublishDate }}</li>
-  <li>{{ $.Param "author" }}</li>
-  <li>{{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}</li>
-
-</ul>
+<div class="metadata">
+  <header>Metadata:</header>
+  <ol>
+    <li>{{ partial "datetime" .PublishDate }}</li>
+    <li>{{ $.Param "author" }}</li>
+    <li>{{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}</li>
+  </ol>
+</div>

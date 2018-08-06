@@ -1,7 +1,10 @@
-{{ if ne .Site.Params.show_menu false }}
-<span id="menu">
-  {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}">{{ .Name }}</a>
-  {{ end }}
-</span>
-{{ end }}
+<nav class="menu">
+  <header>Menu:</header>
+  <ul>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

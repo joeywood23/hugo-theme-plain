@@ -1,12 +1,13 @@
 {{ $t := $.Site.GetPage "/tags" }}
-
-Tags:
-<ul>
-  {{ range .GetParam "tags" }}
-  {{ with $t.GetPage . }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title | urlize }}</a>
-  </li>
-  {{ end }}
-  {{ end }}
-</ul>
+<div class="tags">
+  <header>Tags:</header>
+  <ul>
+    {{ range .GetParam "tags" }}
+    {{ with $t.GetPage . }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title | urlize }}</a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>

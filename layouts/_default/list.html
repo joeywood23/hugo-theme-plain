@@ -1,13 +1,9 @@
 {{ define "main" }}
 
   {{ range .Paginator.Pages }}
-    {{ partial "summary.html" . }}
+    {{ partial "teaser.html" . }}
   {{ end }}
-  
-{{ end }}
 
-{{ define "footer" }}
   {{ partial "pagination.html" . }}
-  <hr>
-  {{ partial "license.html" . }}
+
 {{ end }}

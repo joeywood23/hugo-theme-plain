@@ -1,12 +1,13 @@
 {{ $t := $.Site.GetPage "/categories" }}
-
-Categories:
-<ul>
-  {{ range .GetParam "categories" }}
-  {{ with $t.GetPage . }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title | urlize }}</a>
-  </li>
-  {{ end }}
-  {{ end }}
-</ul>
+<div class="categories">
+  <header>Categories:</header>
+  <ul>
+    {{ range .GetParam "categories" }}
+    {{ with $t.GetPage . }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title | urlize }}</a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>

@@ -1,11 +1,11 @@
-{{ define "title" -}}
+{{ define "title" }}
   {{ .Site.Title }}
-{{- end }}
+{{ end }}
 
 {{ define "main" }}
 
   {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
-    {{ partial "summary.html" . }}
+    {{ partial "teaser.html" . }}
   {{ end }}
 
   {{ partial "pagination.html" . }}

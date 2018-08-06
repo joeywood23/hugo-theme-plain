@@ -1,6 +1,6 @@
 <!-- show by default, hide if "toc: false" -->
 {{ if not (and (isset .Params "toc") (not .Params.toc) ) }}
-<details>
+<details class="toc">
   <summary>Table of Contents</summary>
   {{ .TableOfContents }}
 </details>
