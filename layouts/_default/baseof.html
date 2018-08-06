@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Lang }}">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "meta/favicon" . }}
     {{ partial "meta/title" . }}
     {{ partial "meta/keywords" . }}
     {{ partial "meta/rsslink" . }}
@@ -17,7 +18,7 @@
 
     <header>
     {{ block "header" . }}
-      {{ partial "menu.html" . }}
+      {{ partial "menu" . }}
       <h1>{{ .Title }}</h1>
     {{ end }}
     </header>
@@ -31,7 +32,7 @@
     <footer>
     <hr>
     {{ block "footer" . }}
-      {{ partial "license.html" . }}
+      {{ partial "license" . }}
     {{ end }}
     </footer>
 

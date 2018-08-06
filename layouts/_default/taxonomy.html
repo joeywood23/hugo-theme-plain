@@ -1,12 +1,13 @@
 {{ define "main" }}
 
-  {{ $tx := $.Site.GetPage "taxonomyTerm" (.Data.Plural) }}
-  <a href="{{ $tx.RelPermalink }}">&laquo; show all {{ $tx.Data.Plural }}</a>
-
+  <span class="subtext">
+    {{ partial "list/showalltax" . }} | {{ partial "list/rsslink" . }}
+  </span>
+  
   {{ range .Paginator.Pages }}
-  {{ partial "teaser.html" . }}
+  {{ partial "teaser" . }}
   {{ end }}
-
-  {{ partial "pagination.html" . }}
+  
+  {{ partial "pagination" . }}
 
 {{ end }}

@@ -1,8 +1,8 @@
 <article class="teaser">
   <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   {{ if eq .Type "post" }}
-    {{ partial "post/metadata.html" . }}
-    {{ partial "post/tldr.html" . }}
+    {{ partial "post/metadata" . }}
+    {{ partial "post/tldr" . }}
   {{ end }}
   <p>
     {{ .Summary }}

@@ -1,9 +1,11 @@
 {{ define "main" }}
 
+  {{ partial "list/rsslink" . }}
+
   {{ range .Paginator.Pages }}
-    {{ partial "teaser.html" . }}
+    {{ partial "teaser" . }}
   {{ end }}
 
-  {{ partial "pagination.html" . }}
+  {{ partial "pagination" . }}
 
 {{ end }}

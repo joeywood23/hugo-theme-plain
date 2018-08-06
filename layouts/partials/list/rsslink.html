@@ -1,0 +1,5 @@
+{{ with .OutputFormats.Get "rss" -}}
+<span class="rsslink">
+  <a href="{{ .Permalink }}">rss feed &rsaquo;</a>
+</span>
+{{ end -}}

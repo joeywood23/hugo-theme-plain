@@ -1,0 +1,5 @@
+{{ with $.Site.GetPage "taxonomyTerm" (.Data.Plural) -}}
+<span class="showall">
+  <a href="{{ .RelPermalink }}">&lsaquo; show all {{ .Data.Plural }}</a>
+</span>
+{{ end -}}

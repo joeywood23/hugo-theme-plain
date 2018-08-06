@@ -22,7 +22,7 @@ code {
 }
 
 pre {
-  white-space: pre-wrap;
+  overflow-x: auto;
   padding: 1em;
   border-left: 0.2em solid orange;
 }
@@ -49,7 +49,7 @@ img {
   margin: 2em 0;
 }
 
-.teaser h2 {
+.teaser h2, header h1 {
   margin-bottom: 0;
 }
 
@@ -58,8 +58,8 @@ img {
   font-size: smaller;
 }
 
-footer {
-  font-size: smaller;
+footer, .rsslink, .showall, .subtext {
+  font-size: small;
 }
 
 hr {

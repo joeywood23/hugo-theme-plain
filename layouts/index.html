@@ -1,9 +1,11 @@
 {{ define "main" }}
 
+  {{ partial "list/rsslink" (.Site.GetPage "section" "post") }}
+
   {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
-    {{ partial "teaser.html" . }}
+    {{ partial "teaser" . }}
   {{ end }}
 
-  {{ partial "pagination.html" . }}
+  {{ partial "pagination" . }}
 
 {{ end }}
