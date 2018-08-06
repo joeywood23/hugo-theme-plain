@@ -6,9 +6,6 @@ date: {{ .Date }}
 draft: true
 toc: true
 
-categories:
-  - blog
-
 tags:
   - untagged
 ---
