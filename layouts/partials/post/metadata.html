@@ -1,21 +1,8 @@
-<p class="meta">
+Metadata:
+<ul class="metadata">
 
-  <!-- publishing time -->
-  <svg class="icon"><use xlink:href="#calendar"/></svg>
-  <span>
-    {{ partial "datetime" .PublishDate }}
-  </span>
+  <li>{{ partial "datetime" .PublishDate }}</li>
+  <li>{{ $.Param "author" }}</li>
+  <li>{{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}</li>
 
-  <!-- author -->
-  <svg class="icon"><use xlink:href="#user"/></svg>
-  <span>
-    {{ $.Param "author" }}
-  </span>
-
-  <!-- reading time -->
-  <svg class="icon"><use xlink:href="#timer"/></svg>
-  <span>
-    {{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}
-  </span>
-
-</p>
+</ul>

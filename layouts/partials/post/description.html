@@ -1,4 +1,5 @@
-<!-- tl;dr: / description from frontmatter -->
-{{ if .Description }}
+{{ if .Description -}}
+<span class="description">
   <strong>tl;dr:</strong> {{ .Description }}
-{{ end }}
+</span>
+{{- end }}

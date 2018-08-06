@@ -2,8 +2,7 @@
   <ul>
     {{ range ($.Site.GetPage "taxonomyTerm" (.Data.Plural)).Pages }}
       <li>
-        <a href="{{ .RelPermalink }}">{{ .Title | lower }}</a>
-        ({{ len .Pages }})
+        <a href="{{ .RelPermalink }}">{{ .Title | lower }}</a> ({{ len .Pages }})
       </li>
     {{ end }}
   </ul>

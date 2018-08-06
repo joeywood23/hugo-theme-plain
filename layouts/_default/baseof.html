@@ -1,49 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
 
-    <!-- basic -->
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- title -->
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-
-    <!-- metadata -->
-    {{ partial "meta/description" . }}
-    {{ partial "meta/keywords" . }}
-    {{ partial "meta/robots" . }}
-    {{ partial "meta/author" . }}
-
-    <!-- rss, canonical and prev/next links -->
-    {{ partial "meta/permalinks" . }}
-    {{ partial "meta/relinks" . }}
-
-    <!-- internals -->
-    {{ .Hugo.Generator }}
-    {{ template "_internal/opengraph.html" . }}
-
-    <!-- css styles -->
-    {{ partial "meta/styles.html" . }}
-
+    {{ partial "meta/styles" . }}
   </head>
 
-  <!-- TODO: choose theme variants? -->
-  <!-- {{ $theme_variant := .Site.Params.theme_variant | default "hack" }} -->
-  <!-- <body class="{{ $theme_variant }} main container"> -->
-  <body class="hack main container">
-
-    <!-- inline svg icons -->
-    {{ partial "inline/icons.svg" . }}
-
-    {{ if eq .Type "post" }}<article>{{ end }}
+  <body>
 
     <header>
     {{ block "header" . }}
-      <h1>
-        {{ .Title }}
-        {{ partial "menu.html" . }}
-      </h1>
+      <h1>{{ .Title }}</h1>
+      {{ partial "menu.html" . }}
     {{ end }}
     </header>
 
@@ -54,16 +24,11 @@
     </main>
 
     <footer>
+    <hr>
     {{ block "footer" . }}
-      <hr>
       {{ partial "license.html" . }}
     {{ end }}
     </footer>
-
-    {{ if eq .Type "post" }}</article>{{ end }}
-
-    <!-- no-op -->
-    <!-- {{ block "usedefaults" . }}{{ end }} -->
 
   </body>
 

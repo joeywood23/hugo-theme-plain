@@ -1,14 +1,12 @@
-{{ $tax := "tags" }}
+{{ $t := $.Site.GetPage "/tags" }}
 
-<span class="byline {{ $tax }}">Tags:
-
-{{ range .GetParam $tax }}
-  {{ with ($.Site.GetPage "taxonomyTerm" $tax . ) }}
-  <a href="{{ .RelPermalink }}">
-    <svg class="icon"><use xlink:href="#pound"/></svg>
-    {{ .Title | urlize }}
-  </a>
+Tags:
+<ul>
+  {{ range .GetParam "tags" }}
+  {{ with $t.GetPage . }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title | urlize }}</a>
+  </li>
   {{ end }}
-{{ end }}
-
-</span>
+  {{ end }}
+</ul>

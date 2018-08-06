@@ -1,0 +1,7 @@
+<!-- show by default, hide if "toc: false" -->
+{{ if not (and (isset .Params "toc") (not .Params.toc) ) }}
+<details>
+  <summary>Table of Contents</summary>
+  {{ .TableOfContents }}
+</details>
+{{ end }}
