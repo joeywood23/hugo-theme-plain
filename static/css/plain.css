@@ -70,7 +70,7 @@ hr {
   display: none;
 }
 
-.menu ul, nav.menu li {
+.menu ul, .menu li {
   display: inline;
   padding: 0;
 }
