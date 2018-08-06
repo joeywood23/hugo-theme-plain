@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans');
+/* from: https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400 */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Mono Regular'), local('FiraMono-Regular'), url(/fonts/firamono.woff) format('woff');
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(/fonts/firasans.woff) format('woff');
+}
 
 body {
   font-family: 'Fira Sans', sans-serif;
@@ -44,6 +56,14 @@ img {
 .metadata {
   margin-top: 0;
   font-size: smaller;
+}
+
+footer {
+  font-size: smaller;
+}
+
+hr {
+  border: 1px dashed grey;
 }
 
 .menu header {
