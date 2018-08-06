@@ -1,0 +1,8 @@
+{{ if ne .Site.Params.show_menu false }}
+  <span style="float: right;">
+    {{ $currentNode := . }}
+    {{ range .Site.Menus.main }}
+      <a itemprop="url" class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}active{{end}}" href="{{ .URL }}"><span itemprop="name">{{ .Name }}</span></a>
+    {{ end }}
+  </span>
+{{ end }}

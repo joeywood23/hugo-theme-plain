@@ -1,0 +1,12 @@
+{{ with .Description }}
+	<meta name="description" content="{{ . }}">
+
+{{ else }}{{ if .IsPage }}
+	<meta name="description" content="{{ .Summary }}">
+
+{{ else }}{{ with .Site.Params.description }}
+	<meta name="description" content="{{ . }}">
+
+{{ end }}
+{{ end }}
+{{ end }}

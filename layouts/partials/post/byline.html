@@ -1,0 +1,29 @@
+<p>
+
+  <!-- publish date -->
+  Published on {{ partial "datetime" .PublishDate }}
+
+  <!-- edit date -->
+  {{ if lt .PublishDate .Lastmod }}
+    and last modified on
+    {{ partial "datetime" .Lastmod }}
+  {{ end }}
+
+  <!-- author -->
+  by <span itemprop="author">{{ $.Param "author" }}</span>
+
+  <!-- git info -->
+  {{ if isset $.Site.Params "repository" }}
+  {{ with .GitInfo }}
+    with <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">commit {{ .AbbreviatedHash }}</a>
+  {{ end }}{{ end }}
+
+  <!-- wordcount -->
+  using <span itemprop="wordCount">{{ .WordCount }}</span> words.
+
+  <!-- tags + categories -->
+  <br />
+  <br />{{ partial "post/categories" . }}
+  <br />{{ partial "post/tags" . }}
+
+</p>

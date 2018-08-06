@@ -1,0 +1,14 @@
+{{/* Usage:
+  
+  {{< field "label" >}}
+  __markdown__
+  {{< /field >}}
+
+*/}}
+
+<fieldset class="form-group">
+  <label>{{ .Get 0 }}</label>
+  <span class="form-control">
+    {{ .Inner | markdownify }}
+  </span>
+</fieldset>

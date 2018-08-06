@@ -1,0 +1,7 @@
+{{ if .Keywords }}
+  <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+{{ else if and .IsPage .Params.tags }}
+  <meta name="keywords" content="{{ delimit .Params.tags ", " }}">
+{{ else }}
+  <meta name="keywords" content="{{ range $term, $val := .Site.Taxonomies.categories }}{{ lower (humanize $term) }}, {{ end }}">
+{{ end }}

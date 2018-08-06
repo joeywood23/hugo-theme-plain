@@ -1,0 +1,21 @@
+<p class="meta">
+
+  <!-- publishing time -->
+  <svg class="icon"><use xlink:href="#calendar"/></svg>
+  <span>
+    {{ partial "datetime" .PublishDate }}
+  </span>
+
+  <!-- author -->
+  <svg class="icon"><use xlink:href="#user"/></svg>
+  <span>
+    {{ $.Param "author" }}
+  </span>
+
+  <!-- reading time -->
+  <svg class="icon"><use xlink:href="#timer"/></svg>
+  <span>
+    {{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}
+  </span>
+
+</p>
