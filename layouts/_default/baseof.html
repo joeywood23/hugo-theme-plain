@@ -4,7 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ partial "meta/title" . }}
+    {{ partial "meta/keywords" . }}
+    {{ partial "meta/rsslink" . }}
+    {{ partial "meta/permalink" . }}
+    {{ partial "meta/relinks" . }}
+    {{ partial "meta/robots" . }}
     {{ partial "meta/styles" . }}
   </head>
 

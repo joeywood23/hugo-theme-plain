@@ -1,6 +1,6 @@
-{{ if (isset .Params "prev") }}
+{{ if (isset .Params "prev") -}}
   <link rel="prev" href="{{ .Params.prev }}">
-{{ end }}
-{{ if (isset .Params "next") }}
+{{- end }}
+{{ if (isset .Params "next") -}}
   <link rel="next" href="{{ .Params.next }}">
-{{ end }}
+{{- end }}
