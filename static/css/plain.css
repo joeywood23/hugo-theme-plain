@@ -22,9 +22,9 @@ code {
 }
 
 pre {
-  overflow-x: auto;
+  font-size: smaller;
+  overflow: auto;
   padding: 1em;
-  border-left: 0.2em solid orange;
 }
 
 body {
