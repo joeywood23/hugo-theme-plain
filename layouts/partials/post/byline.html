@@ -1,13 +1,12 @@
-<p>
+
+<p class="byline">
   Published on {{ partial "datetime" .PublishDate }}
-  {{ if lt .PublishDate .Lastmod }}
-    and last modified on
-    {{ partial "datetime" .Lastmod }}
-  {{ end }}
+  {{ if lt .PublishDate .Lastmod -}} and last modified on {{ partial "datetime" .Lastmod -}} {{ end }}
   by {{ $.Param "author" }}
-  {{ if isset $.Site.Params "repository" }}
-  {{ with .GitInfo }}
+  {{ if isset $.Site.Params "repository" -}}
+  {{ with .GitInfo -}}
     with <a href="{{ $.Site.Params.repository }}/commit/{{ .Hash }}">commit {{ .AbbreviatedHash }}</a>
-  {{ end }}{{ end }}
+  {{ end -}}
+  {{ end -}}
   using {{ .WordCount }} words.
 </p>

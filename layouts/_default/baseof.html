@@ -26,16 +26,15 @@
     <main>
     {{ block "main" . }}
       {{ .Content }}
-    {{ end }}
+    {{ end -}}
     </main>
 
     <footer>
-    <hr>
-    {{ block "footer" . }}
-      {{ partial "license" . }}
-    {{ end }}
+      <hr>
+      {{ block "footer" . -}}
+        {{ partial "license" . }}
+      {{ end -}}
     </footer>
 
   </body>
-
 </html>
