@@ -1,10 +1,10 @@
+{{ with .Site.Menus.main }}
 <nav class="menu">
   <header>Menu:</header>
   <ul>
-    {{ range .Site.Menus.main }}
-    <li>
-      <a href="{{ .URL }}">{{ .Name }}</a>
-    </li>
-    {{ end }}
+    {{ range . -}}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end -}}
   </ul>
 </nav>
+{{ end }}
