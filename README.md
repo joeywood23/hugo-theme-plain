@@ -2,13 +2,13 @@
 
 This theme keeps things simple. There is no JavaScript. The markup is simple. Styling is plain. And
 everything is concatenated into standalone `*.html` files which makes page loads blazingly fast with
-only a single request.
-
-<center>
+only a single request. \*
 
 [![](preview.png 'preview the theme on semjonov.de')](https://semjonov.de/)
 
-</center>
+**\*** _Actually, not quite. That was the case until commit 8dddf3f, but I changed that due to the
+duplicated size. Four to five requests and easily cacheable stylesheets and fonts is not bad either,
+though._
 
 ## license
 
