@@ -1,13 +1,12 @@
-{{ $num_to_show := .Site.Params.related_content_limit | default 5 }}
-{{ $related := .Site.RegularPages.Related . | first $num_to_show }}
-
+{{ $num_to_show := .Site.Params.related_content_limit | default 5 -}}
+{{ $related := .Site.RegularPages.Related . | first $num_to_show -}}
+{{ with $related }}
 <aside class="related">
   <header>Related Content:</header>
   <ul>
-    {{ range $related }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
+    {{ range . -}}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end -}}
   </ul>
 </aside>
+{{ end }}
