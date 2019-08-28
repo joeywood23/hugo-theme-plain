@@ -1,24 +1,10 @@
-/* from: https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400 */
-@font-face {
-  font-family: 'Fira Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Fira Mono Regular'), local('FiraMono-Regular'), url(/fonts/firamono.woff) format('woff');
-}
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(/fonts/firasans.woff) format('woff');
-}
-
 body {
-  font-family: 'Fira Sans', sans-serif;
-}
-
-pre,
-code {
-  font-family: 'Fira Mono', monospace;
+  max-width: 45em;
+  margin: 2em auto;
+  padding: 0 1em;
+  line-height: 1.6em;
+  font-size: 18px;
+  color: #444;
 }
 
 pre {
@@ -27,17 +13,16 @@ pre {
   padding: 1em;
 }
 
-body {
-  width: 90%;
-  min-width: 280px;
-  max-width: 1000px;
-  margin: 2em auto;
-  padding: 0 1em;
+code {
+  line-height: 1;
 }
 
 p {
   text-align: justify;
-  line-height: 1.5em;
+}
+
+h1, h2, h3 {
+  line-height: 1.2em;
 }
 
 img {
@@ -64,20 +49,16 @@ footer, .rsslink, .showall, .subtext {
   font-size: small;
 }
 
-hr {
-  border: 1px dashed grey;
-}
-
 .menu header {
   display: none;
 }
 
-.menu ul, .menu li {
-  display: inline;
+.menu ul {
   padding: 0;
 }
 
 .menu li {
+  display: inline;
   padding: 0 0.2em;
 }
 
