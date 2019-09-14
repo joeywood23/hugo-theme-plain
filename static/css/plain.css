@@ -51,7 +51,7 @@ footer, .rsslink, .showall, .subtext {
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid #eee;
 }
 
 .menu header {
