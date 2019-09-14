@@ -2,7 +2,7 @@
 
   {{ partial "list/rsslink" (.Site.GetPage "section" "post") }}
 
-  {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+  {{ range (.Paginate (where site.RegularPages "Type" "in" site.Params.mainSections)).Pages }}
     {{ partial "teaser" . }}
   {{ end }}
 
