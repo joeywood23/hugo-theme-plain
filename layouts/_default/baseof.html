@@ -11,6 +11,7 @@
     {{ partial "meta/permalink" . }}
     {{ partial "meta/relinks" . }}
     {{ partial "meta/robots" . }}
+    {{ partial "meta/generator" . }}
     {{ partial "meta/styles" . }}
   </head>
 
@@ -32,6 +33,7 @@
     <footer>
       {{ block "footer" . -}}
         {{ partial "license" . }}
+        {{ partial "generator" . }}
       {{ end -}}
     </footer>
 
